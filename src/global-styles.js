@@ -1,15 +1,20 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
+  @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+  
   *, *:before, *:after {
     box-sizing: border-box;
   }
+  
   html, body {
     height: 100%;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Kumbh Sans', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-size: 16px;
+    padding: 2em;
+    margin: 0 auto;
 
     background: hsla(273, 75%, 66%, 1);
 

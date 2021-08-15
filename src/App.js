@@ -1,10 +1,10 @@
 import faqsData from "./faqs.json";
 
-import "./App.css";
-
 function App() {
   return (
     <div className="App">
+      <div className="container"></div>
+
       <h1>FAQ</h1>
       {faqsData.map((item) => (
         <div key={item.id}>
