@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/frontend-mentors-faq-accordion-card/static/css/main.6dea0f05.chunk.css",
+    "main.js": "/frontend-mentors-faq-accordion-card/static/js/main.c82cf7a3.chunk.js",
+    "main.js.map": "/frontend-mentors-faq-accordion-card/static/js/main.c82cf7a3.chunk.js.map",
+    "runtime-main.js": "/frontend-mentors-faq-accordion-card/static/js/runtime-main.ef3518cc.js",
+    "runtime-main.js.map": "/frontend-mentors-faq-accordion-card/static/js/runtime-main.ef3518cc.js.map",
+    "static/js/2.aa6dea2b.chunk.js": "/frontend-mentors-faq-accordion-card/static/js/2.aa6dea2b.chunk.js",
+    "static/js/2.aa6dea2b.chunk.js.map": "/frontend-mentors-faq-accordion-card/static/js/2.aa6dea2b.chunk.js.map",
+    "index.html": "/frontend-mentors-faq-accordion-card/index.html",
+    "static/css/main.6dea0f05.chunk.css.map": "/frontend-mentors-faq-accordion-card/static/css/main.6dea0f05.chunk.css.map",
+    "static/js/2.aa6dea2b.chunk.js.LICENSE.txt": "/frontend-mentors-faq-accordion-card/static/js/2.aa6dea2b.chunk.js.LICENSE.txt",
+    "static/media/icon-arrow-down.852fa301.svg": "/frontend-mentors-faq-accordion-card/static/media/icon-arrow-down.852fa301.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ef3518cc.js",
+    "static/js/2.aa6dea2b.chunk.js",
+    "static/css/main.6dea0f05.chunk.css",
+    "static/js/main.c82cf7a3.chunk.js"
+  ]
+}
