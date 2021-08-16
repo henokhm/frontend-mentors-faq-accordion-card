@@ -1,3 +1,4 @@
+import { useState, useContext, createContext } from "react";
 import {
   AccordionContainer,
   Title,
@@ -8,6 +9,8 @@ import {
   ItemCollapeseIcon,
   ItemBody,
 } from "./style";
+
+const ToggleContext = createContext();
 
 function Accordion({ children, ...restProps }) {
   return <AccordionContainer {...restProps}>{children}</AccordionContainer>;
@@ -25,14 +28,25 @@ Accordion.ItemsContainer = function AccordionItemsContainer({
 };
 
 Accordion.Item = function AccordionItem({ children, ...restProps }) {
-  return <Item {...restProps}>{children}</Item>;
+  const [toggleShow, setToggleShow] = useState(false);
+
+  return (
+    <ToggleContext.Provider value={{ toggleShow, setToggleShow }}>
+      <Item {...restProps}>{children}</Item>
+    </ToggleContext.Provider>
+  );
 };
 
 Accordion.ItemHeader = function AccordionItemHeader({
   children,
   ...restProps
 }) {
-  return <ItemHeader {...restProps}>{children}</ItemHeader>;
+  const { toggleShow, setToggleShow } = useContext(ToggleContext);
+  return (
+    <ItemHeader onClick={() => setToggleShow(!toggleShow)} {...restProps}>
+      {children}
+    </ItemHeader>
+  );
 };
 
 Accordion.ItemTitle = function AccordionItemTitle({ children, ...restProps }) {
@@ -43,11 +57,24 @@ Accordion.ItemCollapeseIcon = function AccordionItemCollapeseIcon({
   children,
   ...restProps
 }) {
-  return <ItemCollapeseIcon {...restProps} />;
+  const { toggleShow } = useContext(ToggleContext);
+
+  return (
+    <ItemCollapeseIcon
+      {...restProps}
+      className={toggleShow ? "invert" : null}
+    />
+  );
 };
 
 Accordion.ItemBody = function AccordionItemBody({ children, ...restProps }) {
-  return <ItemBody {...restProps}>{children}</ItemBody>;
+  const { toggleShow } = useContext(ToggleContext);
+
+  return (
+    <ItemBody {...restProps} className={toggleShow ? "open" : "closed"}>
+      {children}
+    </ItemBody>
+  );
 };
 
 export default Accordion;

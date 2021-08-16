@@ -35,9 +35,26 @@ export const ItemTitle = styled.h2`
 
 export const ItemCollapeseIcon = styled.img`
   height: 0.75em;
+
+  &.invert {
+    transform: rotateZ(180deg);
+    hight: 1em;
+    transition: max-height 0.25s cubic-bezier(0.5, 0, 0.1, 1);
+  }
 `;
 
 export const ItemBody = styled.div`
   color: var(--dark-grayish-blue);
   line-height: 1.4em;
+
+  &.closed {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s cubic-bezier(0.5, 0, 0.1, 1);
+  }
+
+  &.open {
+    max-height: 1200px;
+    transition: max-height 0.25s cubic-bezier(0.5, 0, 0.1, 1);
+  }
 `;
