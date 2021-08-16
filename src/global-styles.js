@@ -2,6 +2,14 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+  :root {
+    --very-dark-desaturated-blue: hsl(238, 29%, 16%);
+    --soft-red: hsl(14, 88%, 65%);  
+    --very-dark-grayish-blue: hsl(237, 12%, 33%);
+    --dark-grayish-blue: hsl(240, 6%, 50%);
+    --light-grayish-blue: hsl(240, 5%, 91%);
+  }
   
   *, *:before, *:after {
     box-sizing: border-box;
@@ -40,5 +48,5 @@ export const GlobalStyles = createGlobalStyle`
       fixed;
   
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#af67e9", endColorstr="#6565e7", GradientType=1 );
-  
+    
 }`;
